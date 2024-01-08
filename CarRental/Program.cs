@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarRental.Client;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,16 @@ namespace CarRental
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
+            // Creating Addresseses 
+            Address a1 = new Address("Perichora", "23");
+            Address a2 = new Address("Bema", "12");
+            Address a3 = new Address("Sienna", "23");
+
+            // Actual code
+            Console.WriteLine(a1.getAddressInfo());
+            Console.WriteLine(a2.getAddressInfo());
+            Console.WriteLine(a3.getAddressInfo());
+
             Console.ReadKey();
         }
     }
