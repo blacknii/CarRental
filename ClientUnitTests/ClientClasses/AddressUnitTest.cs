@@ -1,4 +1,4 @@
-﻿using CarRental.Client;
+﻿using CarRental.ClientClasses;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Net;
@@ -26,5 +26,6 @@ namespace AddressUnitTests
             Assert.AreEqual(a2.getAddressInfo(), a2ExpectedValue, "getAddressInfo() doesn't work correctly");
             Assert.AreEqual(a3.getAddressInfo(), a3ExpectedValue, "getAddressInfo() doesn't work correctly");
         }
+
     }
 }
