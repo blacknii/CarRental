@@ -50,6 +50,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Units.cs" />
+    <Compile Include="VehicleClasses\Bicycle.cs" />
+    <Compile Include="VehicleClasses\Car.cs" />
+    <Compile Include="VehicleClasses\Moped.cs" />
+    <Compile Include="VehicleClasses\MotorVehicle.cs" />
+    <Compile Include="VehicleClasses\Vehicle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

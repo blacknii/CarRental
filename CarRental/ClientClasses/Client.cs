@@ -29,7 +29,6 @@ namespace CarRental.ClientClasses
             setMaxCarsCount(maxCarsCount);
         }
 
-        // Getters and setters
         public void setFirstName(string firstName)
         {
             if (firstName == "")
@@ -135,8 +134,6 @@ namespace CarRental.ClientClasses
                 ", clientType: " + clientType + "\n" +
                 this.address.getAddressInfo();
         }
-
-        // Other functions
 
         public double discount()
         {

@@ -21,7 +21,8 @@ namespace ConsoleApp1
             B,
             C,
             D,
-            E
+            E,
+            F
         }
     }
 }

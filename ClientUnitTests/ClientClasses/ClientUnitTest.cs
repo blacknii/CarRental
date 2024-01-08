@@ -33,6 +33,7 @@ namespace ClientUnitTests.ClientClasses
             Assert.AreEqual(c2.getClientInfo(), c2ExpectedValue, "getClientInfo() doesn't work correctly");
             Assert.AreEqual(c3.getClientInfo(), c3ExpectedValue, "getClientInfo() doesn't work correctly");
         }
+
         [TestMethod]
         public void TestMethod2()
         {
