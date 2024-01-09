@@ -1,4 +1,5 @@
 ﻿using CarRental.ClientClasses;
+using CarRental.RentClasses;
 using CarRental.VehicleClasses;
 using ConsoleApp1;
 using System;
@@ -20,24 +21,18 @@ namespace CarRental
             Client c3 = new Client("Adam", "Małysz", "49081079686", a3, Units.ClientType.SuperVip, 10);
 
             // Creating Vehicles
-            Bicycle v1 = new Bicycle("22", 11000);
-            Moped v2 = new Moped("33", 1000, 3000);
+            Bicycle v1 = new Bicycle("22", 100);
+            Moped v2 = new Moped("33", 100, 3000);
             Car v3 = new Car("11", 1000, 3000, Units.Segment.D);
 
             // Actual code
-            Console.WriteLine(c1.getClientInfo());
-            v1.setId("er");
-            v1.setBaseRentPrice(11);
-
-            Console.WriteLine(v1.getId());
-            Console.WriteLine(v1.getBaseRentPrice());
-
-            Console.WriteLine(v2.getVehicleInfo());
-            Console.WriteLine(v3.getVehicleInfo());
-
-            Console.WriteLine(v1.getId());
-            Console.WriteLine(v2.getActualRentalPrice());
-            Console.WriteLine(v3.getActualRentalPrice());
+            Rent r1 = new Rent(c1, v3, DateTime.Now.AddDays(-20));
+            Console.WriteLine(r1.getRentInfo());
+            r1.returnVehicle(DateTime.Now.AddDays(-11));
+            Console.WriteLine("8888888888888888888888888888888888888888888888888888888888888");
+            Console.WriteLine(r1.getRentInfo());
+            Console.WriteLine("8888888888888888888888888888888888888888888888888888888888888");
+            Console.WriteLine(r1.getRentInfo());
 
             Console.ReadKey();
         }

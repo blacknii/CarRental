@@ -89,7 +89,6 @@ namespace CarRental.ClientClasses
 
         public void setAddress(Address address)
         {
-
             if (address == null)
             {
                 throw new ClientException("Address cannot be null.");

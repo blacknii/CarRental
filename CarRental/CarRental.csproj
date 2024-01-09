@@ -50,7 +50,8 @@
     <Compile Include="Exceptions\RentException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Units.cs" />
+    <Compile Include="Helpers\Units.cs" />
+    <Compile Include="RentClasses\Rent.cs" />
     <Compile Include="VehicleClasses\Bicycle.cs" />
     <Compile Include="VehicleClasses\Car.cs" />
     <Compile Include="VehicleClasses\Moped.cs" />
