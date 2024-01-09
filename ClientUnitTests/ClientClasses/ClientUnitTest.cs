@@ -1,4 +1,6 @@
 ﻿using CarRental.ClientClasses;
+using CarRental.RentClasses;
+using CarRental.VehicleClasses;
 using ConsoleApp1;
 using ConsoleApp1.Exceptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
