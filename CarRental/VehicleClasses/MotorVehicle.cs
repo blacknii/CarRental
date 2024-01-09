@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleApp1.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,11 +7,20 @@ using System.Threading.Tasks;
 
 namespace CarRental.VehicleClasses
 {
-    internal abstract class MotorVehicle : Vehicle
+    public abstract class MotorVehicle : Vehicle
     {
         private int engineDisplacement;
         public MotorVehicle(string id, int baseRentPrice, int engineDisplacement) : base(id, baseRentPrice)
         {
+            setEngineDisplacement(engineDisplacement);
+        }
+
+        public void setEngineDisplacement(int engineDisplacement)
+        {
+            if (engineDisplacement < 0)
+            {
+                throw new VehicleException("Engine displacement cannot be a negative number.");
+            }
             this.engineDisplacement = engineDisplacement;
         }
 

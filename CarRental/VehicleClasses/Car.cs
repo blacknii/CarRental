@@ -8,12 +8,22 @@ using static ConsoleApp1.Units;
 
 namespace CarRental.VehicleClasses
 {
-    internal class Car : MotorVehicle
+    public class Car : MotorVehicle
     {
         private Segment segment;
         public Car(string id, int baseRentPrice, int engineDisplacement, Segment segment) : base(id, baseRentPrice, engineDisplacement)
         {
+            setSegment(segment);
+        }
+
+        public void setSegment(Segment segment)
+        {
             this.segment = segment;
+        }
+
+        public Segment getSegment()
+        {
+            return this.segment;
         }
 
         public double getSegmentMultiplier()
@@ -44,7 +54,6 @@ namespace CarRental.VehicleClasses
             return segmentMultiplier;
         }
 
-
         public override int getActualRentalPrice()
         {
             return (int)((getBaseRentPrice() + getAdditionalPrice()) * getSegmentMultiplier());
@@ -52,7 +61,8 @@ namespace CarRental.VehicleClasses
 
         public override string getVehicleInfo()
         {
-            return "Type: Car, ID: " + base.getId() + ", Price: " + base.getActualRentalPrice();
+            return "Type: Car, ID: " + base.getId() + ", Price: " + base.getActualRentalPrice() + ", Engine displacement: " + base.getEngineDisplacement() + ", Segment: " + getSegment();
+
         }
     }
 }

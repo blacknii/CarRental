@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleApp1.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,14 +14,37 @@ namespace CarRental.VehicleClasses
 
         public Vehicle(string id, int baseRentPrice)
         {
-            this.id = id;
-            this.baseRentPrice = baseRentPrice;
+            setId(id);
+            setBaseRentPrice(baseRentPrice);
         }
 
-        public string getId()
+        public void setId(string id)
+        {
+            if (id == "")
+            {
+                throw new VehicleException("Id cannot be empty.");
+            }
+            else if (id == null)
+            {
+                throw new VehicleException("Id cannot be null.");
+            }
+            this.id = id;
+        }
+
+        public virtual string getId()
         {
             return this.id;
         }
+
+        public virtual void setBaseRentPrice(int baseRentPrice)
+        {
+            if (baseRentPrice < 0)
+            {
+                throw new VehicleException("Base rent price cannot be a negative number.");
+            }
+            this.baseRentPrice = baseRentPrice;
+        }
+
         public virtual int getBaseRentPrice()
         {
             return this.baseRentPrice;

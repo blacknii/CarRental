@@ -20,17 +20,22 @@ namespace CarRental
             Client c3 = new Client("Adam", "Małysz", "49081079686", a3, Units.ClientType.SuperVip, 10);
 
             // Creating Vehicles
-            Vehicle v1 = new Bicycle("12", 1000);
-            MotorVehicle v2 = new Moped("33", 1000, 3000);
+            Bicycle v1 = new Bicycle("22", 11000);
+            Moped v2 = new Moped("33", 1000, 3000);
             Car v3 = new Car("11", 1000, 3000, Units.Segment.D);
 
             // Actual code
             Console.WriteLine(c1.getClientInfo());
-            Console.WriteLine(v1.getVehicleInfo());
+            v1.setId("er");
+            v1.setBaseRentPrice(11);
+
+            Console.WriteLine(v1.getId());
+            Console.WriteLine(v1.getBaseRentPrice());
+
             Console.WriteLine(v2.getVehicleInfo());
             Console.WriteLine(v3.getVehicleInfo());
 
-            Console.WriteLine(v1.getActualRentalPrice());
+            Console.WriteLine(v1.getId());
             Console.WriteLine(v2.getActualRentalPrice());
             Console.WriteLine(v3.getActualRentalPrice());
 

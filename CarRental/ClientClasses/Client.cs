@@ -135,7 +135,7 @@ namespace CarRental.ClientClasses
                 this.address.getAddressInfo();
         }
 
-        public double discount()
+        public double getDiscount()
         {
             double clientTypeDiscount = 1;
 
