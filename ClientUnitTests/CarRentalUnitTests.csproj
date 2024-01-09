@@ -52,6 +52,9 @@
     <Compile Include="ClientClasses\AddressUnitTest.cs" />
     <Compile Include="ClientClasses\ClientUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VehicleClasses\CarUnitTest.cs" />
+    <Compile Include="VehicleClasses\MopedUnitTest.cs" />
+    <Compile Include="VehicleClasses\BicycleUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -5,13 +5,13 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using static ConsoleApp1.Units;
 
-namespace ClientUnitTests.ClientClasses
+namespace ClientUnitTests
 {
     [TestClass]
     public class ClientUnitTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void BasicGetters()
         {
             // Arrange
             Address a1 = new Address("Perichora", "23");
@@ -35,7 +35,7 @@ namespace ClientUnitTests.ClientClasses
         }
 
         [TestMethod]
-        public void TestMethod2()
+        public void BasicSetters()
         {
             // Arrange
             Address a1 = new Address("Perichora", "23");
@@ -68,7 +68,30 @@ namespace ClientUnitTests.ClientClasses
         }
 
         [TestMethod]
-        public void TestMethod3()
+        public void GetDiscount()
+        {
+            // Arrange
+            Address a1 = new Address("Perichora", "23");
+            Address a2 = new Address("Bema", "12");
+            Address a3 = new Address("Sienna", "23");
+
+            Client c1 = new Client("Adam", "Mickiewicz", "66071089838", a1, ClientType.Normal, 3);
+            Client c2 = new Client("Tomasz", "Mickiewicz", "51012413685", a2, ClientType.Vip, 6);
+            Client c3 = new Client("Adam", "Małysz", "49081079686", a3, ClientType.SuperVip, 10);
+
+            // Act
+            double c1DiscountExpectedValue = 1;
+            double c2DiscountExpectedValue = 0.9;
+            double c3DiscountExpectedValue = 0.7;
+
+            // Assert
+            Assert.AreEqual(c1.getDiscount(), c1DiscountExpectedValue, "getDiscount() doesn't work correctly");
+            Assert.AreEqual(c2.getDiscount(), c2DiscountExpectedValue, "getDiscount() doesn't work correctly");
+            Assert.AreEqual(c3.getDiscount(), c3DiscountExpectedValue, "getDiscount() doesn't work correctly");
+        }
+
+        [TestMethod]
+        public void Exceptions()
         {
             // Arrange
             Address a1 = new Address("Perichora", "23");

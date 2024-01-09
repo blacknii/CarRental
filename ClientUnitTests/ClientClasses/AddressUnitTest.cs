@@ -9,7 +9,7 @@ namespace AddressUnitTests
     public class AddressUnitTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void BasicGetters()
         {
             // Arrange
             Address a1 = new Address("Perichora", "23");
