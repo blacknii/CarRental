@@ -1,5 +1,6 @@
 ﻿using CarRental.ClientClasses;
 using CarRental.RentClasses;
+using CarRental.ReposytoriesClasses;
 using CarRental.VehicleClasses;
 using ConsoleApp1;
 using System;
@@ -26,13 +27,37 @@ namespace CarRental
             Car v3 = new Car("11", 1000, 3000, Units.Segment.D);
 
             // Actual code
-            Rent r1 = new Rent(c1, v3, DateTime.Now.AddDays(-20));
-            Console.WriteLine(r1.getRentInfo());
-            r1.returnVehicle(DateTime.Now.AddDays(-11));
-            Console.WriteLine("8888888888888888888888888888888888888888888888888888888888888");
-            Console.WriteLine(r1.getRentInfo());
-            Console.WriteLine("8888888888888888888888888888888888888888888888888888888888888");
-            Console.WriteLine(r1.getRentInfo());
+            VehicleRepository vr = new VehicleRepository();
+            foreach (Vehicle vehicle in vr.getAll()) 
+            {
+                Console.WriteLine(vehicle.getVehicleInfo());
+            }
+            Console.WriteLine("------------------------------");
+            vr.create(v1);
+            foreach (Vehicle vehicle in vr.getAll())
+            {
+                Console.WriteLine(vehicle.getVehicleInfo());
+            }
+            Console.WriteLine("------------------------------");
+            vr.create(v2);
+            foreach (Vehicle vehicle in vr.getAll())
+            {
+                Console.WriteLine(vehicle.getVehicleInfo());
+            }
+            Console.WriteLine("------------------------------");
+            vr.remove(v1);
+            vr.create(v3);
+            foreach (Vehicle vehicle in vr.getAll())
+            {
+                Console.WriteLine(vehicle.getVehicleInfo());
+            }
+            Console.WriteLine("------------------------------");
+            vr.update(v3, v1);
+            foreach (Vehicle vehicle in vr.getAll())
+            {
+                Console.WriteLine(vehicle.getVehicleInfo());
+            }
+            Console.WriteLine("------------------------------");
 
             Console.ReadKey();
         }
