@@ -12,6 +12,7 @@ namespace RepositoryUnitTests
     [TestClass]
     public class VehicleRepositoryUnitTest
     {
+        [TestMethod]
         public void BasicFunctionality()
         {
             // Arrange
