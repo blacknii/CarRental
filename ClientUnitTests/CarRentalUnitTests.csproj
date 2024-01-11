@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="ClientClasses\AddressUnitTest.cs" />
     <Compile Include="ClientClasses\ClientUnitTest.cs" />
+    <Compile Include="ManagerClasses\RentMenagerUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RentClasses\RentUnitTest.cs" />
     <Compile Include="ReposytoriesClasses\VehicleRepositoryUnitTest.cs" />
