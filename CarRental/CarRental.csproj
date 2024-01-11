@@ -45,9 +45,11 @@
   <ItemGroup>
     <Compile Include="ClientClasses\Address.cs" />
     <Compile Include="ClientClasses\Client.cs" />
+    <Compile Include="Exceptions\RentMenagerException.cs" />
     <Compile Include="Exceptions\VehicleException.cs" />
     <Compile Include="Exceptions\ClientException.cs" />
     <Compile Include="Exceptions\RentException.cs" />
+    <Compile Include="ManagerClasses\RentMenager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Helpers\Units.cs" />
